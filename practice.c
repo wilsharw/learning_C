@@ -1,9 +1,11 @@
-#include<stdio.h>
+//program to calculate the eighth triangular number//
+
+#include <stdio.h>
 int main(void)
 {
-    double calculate;
-    calculate = ((3.31e-8) * 2.01e-7) / ((7.16e-6) + 2.01e-8);
+    int triangular_num;
+    triangular_num = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8;
+    printf("The value of the eighth triangular number is %i\n", triangular_num);
 
-    printf("The result is %e\n",calculate);
     return 0;
 }
