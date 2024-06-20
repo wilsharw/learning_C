@@ -1,21 +1,20 @@
-//generate a tavle of triangularnumber/
+//asking the user for output//
 
 #include <stdio.h>
 
 int main(void)
 {
-    int n,triangular_num;
+    int n,number, triangular_num;
 
-    printf("Table of Triangular numbers\n\n");
-    printf("n             numbers through 1 to 10\n");
-    printf("____         ________________________\n");
+    printf("Enter the triangle number value\n");
+    scanf("%i", &number);
 
     triangular_num = 0;
 
-    for (n = 1; n <= 10; n=n+1)
+    for (n = 1; n <=number ; n=n+1)
         
-            {triangular_num = triangular_num + n;
-            printf("%i           %i\n", n, triangular_num);}
+            triangular_num = triangular_num + n;
+            printf("The value for triangle number %i is %i\n", number , triangular_num);
     
 return 0;
 }
