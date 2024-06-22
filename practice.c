@@ -4,16 +4,16 @@
 
 int main(void)
 {
-    int n, n_square;
-    printf("Display the value of n and n_square from 1 through 10\n");
-    printf("n                   n_square\n");
-    printf("----              ----------\n");
-    n_square = 0;
-    
-    for (n = 1; n <= 10; n = n + 1)
+    int n, triangular_number;
+    printf("Display the value of the triangular number of every 5th number between 5 and 50\n");
+    printf("n                   triangular_number\n");
+    printf("----              -------------------\n");
+    triangular_number = 0;
+
+    for (n = 5;  n <= 50; n = n + 5)
     {
-        n_square = n * n;
-        printf("%i               %i\n", n, n_square);
+        triangular_number= n * (n + 1) /2;
+        printf("%i               %i\n", n, triangular_number);
         }
     return 0;
 }
