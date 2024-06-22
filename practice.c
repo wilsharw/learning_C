@@ -4,19 +4,16 @@
 
 int main(void)
 {
-    int n,number, triangular_num,counter;
-
-    for (counter = 1; counter <= 5;counter=counter+1)
+    int n, n_square;
+    printf("Display the value of n and n_square from 1 through 10\n");
+    printf("n                   n_square\n");
+    printf("----              ----------\n");
+    n_square = 0;
+    
+    for (n = 1; n <= 10; n = n + 1)
     {
-       printf("Enter the triangle number value\n");
-       scanf("%i", &number);
-
-    triangular_num = 0;
-
-    for (n = 1; n <=number ; n=n+1)
-        
-            triangular_num = triangular_num + n;
-            printf("The value for triangle number %i is %i\n", number , triangular_num);
-    }
-return 0;
+        n_square = n * n;
+        printf("%i               %i\n", n, n_square);
+        }
+    return 0;
 }
