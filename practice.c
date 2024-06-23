@@ -1,19 +1,21 @@
-//asking the user for output five times//
+//Table for factorial number//
 
 #include <stdio.h>
 
 int main(void)
 {
-    int n, triangular_number;
-    printf("Display the value of the triangular number of every 5th number between 5 and 50\n");
-    printf("n                   triangular_number\n");
+    int x, n, Factorial_value;
+    printf("Display the Factorial value from 1 to 10\n");
+    printf("n                   factorial value\n");
     printf("----              -------------------\n");
-    triangular_number = 0;
 
-    for (n = 5;  n <= 50; n = n + 5)
+    
+    for (n = 1; n <= 10; n = n + 1)
     {
-        triangular_number= n * (n + 1) /2;
-        printf("%i               %i\n", n, triangular_number);
-        }
+        Factorial_value = 1;
+        for (x = n; x > 1; x = x - 1)
+            Factorial_value = Factorial_value * x;
+        printf("%i               %i\n", n, Factorial_value);
+    }
     return 0;
 }
