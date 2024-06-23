@@ -1,21 +1,21 @@
-//Table for factorial number//
+//Alligning the code/
 
 #include <stdio.h>
 
 int main(void)
 {
-    int x, n, Factorial_value;
-    printf("Display the Factorial value from 1 to 10\n");
-    printf("n                   factorial value\n");
-    printf("----              -------------------\n");
+    int n, two_to_the_n;
 
-    
-    for (n = 1; n <= 10; n = n + 1)
-    {
-        Factorial_value = 1;
-        for (x = n; x > 1; x = x - 1)
-            Factorial_value = Factorial_value * x;
-        printf("%i               %i\n", n, Factorial_value);
-    }
-    return 0;
+    printf("Table of powers of two\n\n");
+    printf(" n        2 to the n\n");
+    printf("____     ___________\n");
+
+    two_to_the_n = 1;
+    for (n = 0; n <= 10;++n)
+      {
+          printf("%2i         %i\n", n, two_to_the_n);
+          two_to_the_n *=2;
+
+      }
+      return 0;
 }
