@@ -1,25 +1,16 @@
-//Alligning the code/
+//program to calculate the absolute value of the integer//
+#include<stdio.h>
+int main (void)
 
-#include <stdio.h>
-
-int main(void)
 {
-    int sum, n, count;
+    int number;
+    printf("Type the number:  ");
+    scanf("%i", &number);
 
-    for (count = 1; count <= 10;++count)
-    {
-        printf("Enter a non negative integer: ");
-        scanf("%i", &n);
-        sum = 0;
+    if(number<0)
+        number = -number;
 
-        for (; n != 0; n = n / 10)
-        {
-            sum = sum+ (n % 10) ;
+    printf("The number is %i\n", number);
 
-        }
-            printf("the sum of digits is %i\n", sum);
-
-    }
-
-        return 0;
+    return 0;
 }
