@@ -1,32 +1,20 @@
-//program to calculate the grade//
+//program to determine if the number is even or odd(if else)//
 #include<stdio.h>
 int main (void)
 
 {
-    int number_of_grades, i, grade, failing_count,grade_total;
-    float average;
+    int number, check;
 
-    failing_count = 0;
-    average = 0;
-    grade_total = 0;
+    printf("Enter the number:");
+    scanf("%i", &number);
 
-    printf("How many grades will you be entering:   \n");
-    scanf("%i", &number_of_grades);
+    check = number % 2;
 
-    for (i = 1; i <= number_of_grades; ++i)
+    if(check==0)
+        printf("The entered number is even\n");
 
-        {
-        printf("Enter the grade #%i:  \n", i);
-        scanf("%i", &grade);
-        grade_total = grade_total + grade;
-        
-        if(grade<65)
-            ++failing_count;
+    if(check!=0)
+        printf("The entered number is odd\n");
 
-        average = (float)grade_total / number_of_grades;
-        }
-        printf("The average of the grades is :%f\n", average);
-        printf("The number of failing test grades are:%i\n", failing_count);
-
-        return 0;
+    return 0;
 }
