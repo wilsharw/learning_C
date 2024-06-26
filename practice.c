@@ -1,21 +1,20 @@
-//program to implement the sign function//
+//Program exercise 5.6_nested if else//
+
 #include<stdio.h>
 int main (void)
 
 {
-    int number,sign;
+    char c;
 
-    printf("Please enter the number:");
-    scanf("%i", &number);
+    printf("Please enter a single character:");
+    scanf("%c", &c);
 
-    if (number<0)
-        sign = -1;
-    else if (number ==0)
-        sign = 0;
+    if ((c>='A' && c<='Z') || (c>='a' && c<='z'))
+        printf("It is a alphabetical character");
+    else if (c>='0' && c<='9')
+        printf("It is a numerical character");
     else
-        sign = 1;
-
-    printf("Sign=%i\n", sign);
+        printf("It is a special character");
 
     return 0;
 }
