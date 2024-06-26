@@ -1,24 +1,21 @@
-//program to determine if its a leap year or not//
+//program to implement the sign function//
 #include<stdio.h>
 int main (void)
 
 {
-    int year,rem_4,rem_100,rem_400;
+    int number,sign;
 
-    
-    printf("Enter the year:");
-    scanf("%i", &year);
+    printf("Please enter the number:");
+    scanf("%i", &number);
 
-    rem_4 = year % 4;
-    rem_100 = year % 100;
-    rem_400 = year % 400;
+    if (number<0)
+        sign = -1;
+    else if (number ==0)
+        sign = 0;
+    else
+        sign = 1;
 
-    if((rem_4 == 0 && rem_100 != 0) || rem_400 == 0)
-     printf("It is a leap year!");
-    else 
-     printf("It is not a leap year!");
-
-    
+    printf("Sign=%i\n", sign);
 
     return 0;
 }
