@@ -6,19 +6,21 @@ messgae*/
 int main(void)
 
 {
-  int number, value1, value2;
+  int value1, value2;
+  float number;
 
   printf("Enter a non negative number 1:  \n");
   scanf("%i", &value1);
   printf("Enter a non negative number 2:  \n");
   scanf("%i", &value2);
 
-  number = (value1 / value2);
+  if (value2 == 0) {
+    printf("The answer is undefined");
+    return 0;
+  }
 
-  if (number % 2 == 0)
-    printf("The number is evenly divisible.\n");
-  if (number % 2 != 0)
-    printf("The number is not evenly divisible.\n");
+  number = (float)value1 / value2;
 
+  printf("%.3f \n", number);
   return 0;
 }
