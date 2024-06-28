@@ -1,39 +1,24 @@
-//Program exercise 5.9_switch statement//
-//program to evalute simple expressions of the form value operator//
+// Program exercise 5.9_switch statement//
+// program to evalute simple expressions of the form value operator//
 
-#include<stdio.h>
-int main (void)
+#include <stdio.h>
+int main(void)
 
 {
-    float value_1,value_2;
-    char operator;
+  int num, div;
+  _Bool prime_num;
 
-    printf("Enter the expression:\n");
-    scanf("%f%c%f", &value_1, &operator, &value_2);
+  for (num = 2; num <= 50; ++num) {
+    prime_num = 1;
+    for (div = 2; div < num; ++div) {
+      if (num % div == 0) {
+        prime_num = 0;
+      }
+    }
 
-    switch(operator)
-        {
-            case'+':
-              printf("%f\n",value_1 + value_2);
-              break;
-            case'-':
-              printf("%f\n",value_1 - value_2);
-              break;
-            case'*':
-              printf("%f\n",value_1 * value_2);
-              break;
-            case'/':
-              if(value_2==0)
-              printf("Division by zero\n");
-              else
-              printf("%f\n", value_1/value_2);
-              break;
-            default:
-                printf("Unknown operator\n");
-                break;
-            }
-            return 0;
+    if (prime_num != 0) {
+      printf("%i  ", num);
+    }
+  }
+  return 0;
 }
-
-   
-
