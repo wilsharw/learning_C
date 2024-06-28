@@ -1,24 +1,24 @@
-// Program exercise 5.9_switch statement//
-// program to evalute simple expressions of the form value operator//
+/*Ask the user to type two integer values at the termianl.Test these two numbers
+to determine if the first is evenly divisible by second, and display an
+messgae*/
 
 #include <stdio.h>
 int main(void)
 
 {
-  int num, div;
-  _Bool prime_num;
+  int number, value1, value2;
 
-  for (num = 2; num <= 50; ++num) {
-    prime_num = 1;
-    for (div = 2; div < num; ++div) {
-      if (num % div == 0) {
-        prime_num = 0;
-      }
-    }
+  printf("Enter a non negative number 1:  \n");
+  scanf("%i", &value1);
+  printf("Enter a non negative number 2:  \n");
+  scanf("%i", &value2);
 
-    if (prime_num != 0) {
-      printf("%i  ", num);
-    }
-  }
+  number = (value1 / value2);
+
+  if (number % 2 == 0)
+    printf("The number is evenly divisible.\n");
+  if (number % 2 != 0)
+    printf("The number is not evenly divisible.\n");
+
   return 0;
 }
