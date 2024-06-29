@@ -1,26 +1,48 @@
-/*Ask the user to type two integer values at the termianl.Test these two numbers
-to determine if the first is evenly divisible by second, and display an
-messgae*/
+/*Simple printing calculator*/
 
 #include <stdio.h>
 int main(void)
 
 {
-  int value1, value2;
-  float number;
+  int value1, accumulator;
+  char operator;
+  accumulator = 0;
+  while (1) {
+    printf("Enter your expression: \n");
+    scanf("%i %c", &value1, &operator);
 
-  printf("Enter a non negative number 1:  \n");
-  scanf("%i", &value1);
-  printf("Enter a non negative number 2:  \n");
-  scanf("%i", &value2);
-
-  if (value2 == 0) {
-    printf("The answer is undefined");
-    return 0;
+    switch (operator) {
+    case '+':
+      printf("%i\n", value1 + accumulator);
+      accumulator = value1 + accumulator;
+      break;
+    case '-':
+      printf("%i\n", accumulator - value1);
+      accumulator = accumulator - value1;
+      break;
+    case '*':
+      printf("%i\n", accumulator * value1);
+      accumulator = accumulator * value1;
+      break;
+    case '/':
+      if (value1 == 0)
+        printf("Divisionby zero.\n");
+      else
+        printf("%i\n", accumulator / value1);
+      accumulator = accumulator / value1;
+      break;
+    case 's':
+      printf("%i\n", value1);
+      accumulator = value1;
+      break;
+    case 'e':
+      printf("%i\n", accumulator);
+      return 0;
+      break;
+    default:
+      printf("Unknown operator.\n");
+      break;
+    }
   }
-
-  number = (float)value1 / value2;
-
-  printf("%.3f \n", number);
   return 0;
 }
