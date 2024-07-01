@@ -1,48 +1,63 @@
-/*Simple printing calculator*/
+/*integer to English*/
 
 #include <stdio.h>
-int main(void)
+int reverse_number(int number) {}
 
-{
-  int value1, accumulator;
-  char operator;
-  accumulator = 0;
-  while (1) {
-    printf("Enter your expression: \n");
-    scanf("%i %c", &value1, &operator);
+int main(void) {
+  int integer;
+  char letter;
 
-    switch (operator) {
-    case '+':
-      printf("%i\n", value1 + accumulator);
-      accumulator = value1 + accumulator;
+  printf("Enter the non negative integer: ");
+  scanf("%i", &integer);
+
+  // reverse number
+  integer = reverse_number(integer);
+
+  printf("Reversed integer %d", integer);
+
+  letter = (char)integer % 10;
+  while (letter != 0) {
+    integer = integer / 10;
+
+    switch (letter) {
+    case 1:
+      printf("one\n");
       break;
-    case '-':
-      printf("%i\n", accumulator - value1);
-      accumulator = accumulator - value1;
+    case 2:
+      printf("two\n");
       break;
-    case '*':
-      printf("%i\n", accumulator * value1);
-      accumulator = accumulator * value1;
+    case 3:
+      printf("three\n");
       break;
-    case '/':
-      if (value1 == 0)
-        printf("Divisionby zero.\n");
-      else
-        printf("%i\n", accumulator / value1);
-      accumulator = accumulator / value1;
+    case 4:
+      printf("four\n");
       break;
-    case 's':
-      printf("%i\n", value1);
-      accumulator = value1;
+    case 5:
+      printf("five\n");
       break;
-    case 'e':
-      printf("%i\n", accumulator);
-      return 0;
+    case 6:
+      printf("six\n");
+      break;
+    case 7:
+      printf("seven\n");
+      break;
+    case 8:
+      printf("eight\n");
+      break;
+      letter = (char)integer % 10;
+
+    case 9:
+      printf("nine\n");
+      break;
+    case 0:
+      printf("zero\n");
       break;
     default:
       printf("Unknown operator.\n");
       break;
     }
+
+    letter = (char)integer % 10;
   }
   return 0;
 }
