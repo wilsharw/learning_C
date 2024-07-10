@@ -1,15 +1,16 @@
-/*iEvaluate the polynomial*/
+/*Evaluate the polynomial*/
 
 #include <stdio.h>
 
 int main(void) {
 
-  double polynomial;
+  int i, j, next_multiple;
+  i = 256;
+  j = 7;
 
-  polynomial = (double)((3.31 * (10e-8)) * 2.01 * (10e-7)) /
-               ((7.16 * (10e-6)) + (2.01 * (10e-8)));
+  next_multiple = (i) + (j) - (i % j);
 
-  printf("The value of polynomial is %e\n", polynomial);
+  printf("The next multiple is %i\n", next_multiple);
 
   return 0;
 }
