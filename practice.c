@@ -1,14 +1,14 @@
-/*integer to English*/
+/*iEvaluate the polynomial*/
 
 #include <stdio.h>
 
 int main(void) {
 
-  float F, C;
-  F = 27;
-  C = (F - 32) / (1.8);
+  float x, polynomial;
+  x = 2.55;
+  polynomial = (float)(3 * (x * x * x)) - (5 * (x * x)) + (6);
 
-  printf("The value of 27 degree fahrenheight in celsius is %0.2f\n", C);
+  printf("The value of polynomial is %f\n", polynomial);
 
   return 0;
 }
