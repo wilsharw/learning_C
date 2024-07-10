@@ -4,11 +4,12 @@
 
 int main(void) {
 
-  float x, polynomial;
-  x = 2.55;
-  polynomial = (float)(3 * (x * x * x)) - (5 * (x * x)) + (6);
+  double polynomial;
 
-  printf("The value of polynomial is %f\n", polynomial);
+  polynomial = (double)((3.31 * (10e-8)) * 2.01 * (10e-7)) /
+               ((7.16 * (10e-6)) + (2.01 * (10e-8)));
+
+  printf("The value of polynomial is %e\n", polynomial);
 
   return 0;
 }
